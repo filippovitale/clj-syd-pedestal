@@ -1,4 +1,4 @@
 clj-syd-pedestal
 ================
 
-clj-syd hacknight on pedestal
+* ```lein new pedestal-app hw no-comment```
