@@ -1,6 +1,0 @@
-wiki/
-.lein-repl-history
-.lein-failures
-target
-.idea
-*.iml
