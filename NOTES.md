@@ -11,3 +11,5 @@ One the ```REPL``` run:
 ```^:shared``` to share code between clojure and clojurescript
 
 ```input Queue``` --> ```Data Model``` --:emit--> ```App Model``` --rendering.cljs--> DOM
+
+Use the :derive calculating the length of the message
