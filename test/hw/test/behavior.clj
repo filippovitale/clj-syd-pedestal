@@ -1,4 +1,4 @@
-(ns clj-syd-pedestal.test.behavior
+(ns hw.test.behavior
   (:require [io.pedestal.app :as app]
             [io.pedestal.app.protocols :as p]
             [io.pedestal.app.tree :as tree]
@@ -6,7 +6,7 @@
             [io.pedestal.app.render :as render]
             [io.pedestal.app.util.test :as test])
   (:use clojure.test
-        clj-syd-pedestal.behavior
+        hw.behavior
         [io.pedestal.app.query :only [q]]))
 
 ;; Test a transform function

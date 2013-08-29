@@ -1,11 +1,11 @@
-(ns clj-syd-pedestal.start
+(ns hw.start
   (:require [io.pedestal.app.protocols :as p]
             [io.pedestal.app :as app]
             [io.pedestal.app.render.push :as push-render]
             [io.pedestal.app.render :as render]
             [io.pedestal.app.messages :as msg]
-            [clj-syd-pedestal.behavior :as behavior]
-            [clj-syd-pedestal.rendering :as rendering]))
+            [hw.behavior :as behavior]
+            [hw.rendering :as rendering]))
 
 (defn create-app [render-config]
   (let [app (app/build behavior/example-app)

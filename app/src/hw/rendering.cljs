@@ -1,16 +1,16 @@
-(ns clj-syd-pedestal.rendering
+(ns hw.rendering
   (:require [domina :as dom]
             [io.pedestal.app.render.push :as render]
             [io.pedestal.app.render.push.templates :as templates]
             [io.pedestal.app.render.push.handlers.automatic :as d])
-  (:require-macros [clj-syd-pedestal.html-templates :as html-templates]))
+  (:require-macros [hw.html-templates :as html-templates]))
 
-(def templates (html-templates/clj-syd-pedestal-templates))
+(def templates (html-templates/hw-templates))
 
 (defn render-page [renderer [_ path] transmitter]
   (let [parent (render/get-parent-id renderer path)
         id (render/new-id! renderer path)
-        html (templates/add-template renderer path (:clj-syd-pedestal-page templates))]
+        html (templates/add-template renderer path (:hw-page templates))]
     (dom/append! (dom/by-id parent) (html {:id id :message ""}))))
 
 (defn render-message [renderer [_ path _ new-value] transmitter]

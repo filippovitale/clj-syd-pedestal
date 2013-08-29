@@ -10,7 +10,7 @@
 
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- rollover daily -->
-      <fileNamePattern>logs/clj-syd-pedestal-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <fileNamePattern>logs/hw-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <timeBasedFileNamingAndTriggeringPolicy
           class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
         <!-- or whenever the file size reaches 64 MB -->
@@ -45,6 +45,6 @@
 
 
   <!-- For loggers in the ".*" namespace, log at all levels. -->
-  <logger name="clj-syd-pedestal" level="INFO" />
+  <logger name="hw" level="INFO" />
   
 </configuration>

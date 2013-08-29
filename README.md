@@ -1,7 +1,7 @@
-# clj-syd-pedestal
+# hw
 
 Start working on this application by writing its behavior in the file
-`app/src/clj_syd_pedestal/behavior.clj`
+`app/src/hw/behavior.clj`
 
 ## Links
 

@@ -1,6 +1,6 @@
-(ns clj-syd-pedestal.simulated.start
+(ns hw.simulated.start
   (:require [io.pedestal.app.render.push.handlers.automatic :as d]
-            [clj-syd-pedestal.start :as start]
+            [hw.start :as start]
             ;; This needs to be included somewhere in order for the
             ;; tools to work.
             [io.pedestal.app-tools.tooling :as tooling]))

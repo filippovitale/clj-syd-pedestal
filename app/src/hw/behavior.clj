@@ -1,4 +1,4 @@
-(ns ^:shared clj-syd-pedestal.behavior
+(ns ^:shared hw.behavior
     (:require [clojure.string :as string]
               [io.pedestal.app.messages :as msg]))
 

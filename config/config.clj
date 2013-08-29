@@ -9,7 +9,7 @@
 (def configs
   ;; One project can host multiple applications. The top-level of the
   ;; config map contains one entry for each appliction.
-  {:clj-syd-pedestal
+  {:hw
    {;; :build contains parameters which are passed to the build
     :build {;; :watch-files contains a list of files to watch for
             ;; changes. Each file had a tag associated with it, in
@@ -19,7 +19,7 @@
             ;; any files which use macros to read in templates. This
             ;; will force recompilation of these files and update
             ;; the templates.
-            :triggers {:html [#"clj_syd_pedestal/rendering.js"]}}
+            :triggers {:html [#"hw/rendering.js"]}}
     ;; General application level configuration
     :application {;; The directory where all generated JavaScript for
                   ;; this application will be written.
@@ -44,12 +44,12 @@
     ;; tool. In the example below we enable the rendering view.
     :built-in {:render {;; The directory where rendering scripts
                         ;; are stored
-                        :dir "clj-syd-pedestal"
+                        :dir "hw"
                         ;; The namespace which contains the renderer
                         ;; to use. This namespace must have a
                         ;; `render-config` function which returns a
                         ;; render configuration.
-                        :renderer 'clj_syd_pedestal.rendering
+                        :renderer 'hw.rendering
                         ;; Enable logging of rendering data when in
                         ;; this view.
                         :logging? true
@@ -63,15 +63,15 @@
                         ;; be generated to host this application. This
                         ;; page will be generated from the template
                         ;; application.html
-                        :uri "/clj-syd-pedestal-data-ui.html"
+                        :uri "/hw-data-ui.html"
                         ;; Provide the name that will appear in the
                         ;; control panel for this aspect.
                         :name "Data UI"
                         :order 1
-                        :out-file "clj-syd-pedestal-data-ui.js"
+                        :out-file "hw-data-ui.js"
                         ;; The namespace which contains the `main`
                         ;; function to call to start the application.
-                        :main 'clj_syd_pedestal.simulated.start
+                        :main 'hw.simulated.start
                         ;; Allow render data recording. Use
                         ;; Alt-Shift-R to start and stop recording.
                         :recording? true
@@ -81,10 +81,10 @@
                         :output-root :tools-public
                         ;; The data-ui aspect uses the tooling.html template
                         :template "tooling.html"}
-              :development {:uri "/clj-syd-pedestal-dev.html"
+              :development {:uri "/hw-dev.html"
                             :name "Development"
-                            :out-file "clj-syd-pedestal-dev.js"
-                            :main 'clj_syd_pedestal.start
+                            :out-file "hw-dev.js"
+                            :main 'hw.start
                             :logging? true
                             :order 3}
               :fresh {:uri "/fresh.html"
@@ -94,9 +94,9 @@
                       :order 4
                       :output-root :tools-public
                       :template "tooling.html"}
-              :production {:uri "/clj-syd-pedestal.html"
+              :production {:uri "/hw.html"
                            :name "Production"
                            :optimizations :advanced
-                           :out-file "clj-syd-pedestal.js"
-                           :main 'clj_syd_pedestal.start
+                           :out-file "hw.js"
+                           :main 'hw.start
                            :order 5}}}})
